@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = 'oxocarbon',
+  theme = 'gruvbox',
 }
 
 M.plugins = 'custom.plugins'

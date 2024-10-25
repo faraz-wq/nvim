@@ -35,11 +35,21 @@ lspconfig.gopls.setup {
   }
 }
 
-local servers = {"tsserver", "tailwindcss", "eslint"}
+local servers = {
+  "tsserver",
+  "tailwindcss", 
+  "eslint",
+  "pyright",
+  "ruff_lsp",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
+    filetypes = {
+      "python",
+      "typescript",
+    }
   }
 end
